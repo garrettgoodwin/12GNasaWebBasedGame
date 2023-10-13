@@ -7,9 +7,9 @@ This project aims to develop an educational online game that takes inspiration f
 ## Getting Started
 To get started with [Name of the Game], follow these steps:  
 1. Clone or download the repository.  
-2. Open the project in Unity.  
+2. Open the project in Unreal Engine 5.3.1.  
 3. Navigate to the Assets/Scenes folder and open the Main Menu scene.  
-4. Press the play button to start the game in the Unity Editor.  
+4. Press the play button to start the game in the Unreal Engine 5.3.1 Editor.  
 
 Alternatively, you ceck out the web game on Nasa's website [here](https://www.example.com) to play without needing Unity.  
 
