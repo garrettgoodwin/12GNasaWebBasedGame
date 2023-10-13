@@ -5,11 +5,11 @@ This project seeks to create an engaging online educational game inspired by NAS
 |Neha Balamurugan|Pratham Gupta|Garrett Goodwin|Julie Kye|Loe-Paul Morel|
 |----|----|----|----|----|
 
-# About the Game🎮
+### About the Game🎮
 [Name of Game] is a top-down shooter where the player must face endless waves of increasingly lethal enemies. Survive as long as you can and see how high you can climb on the leaderboard.
 
 
-# Getting Started🏃‍♀️
+### Getting Started🏃‍♀️
 To get started with [Name of the Game], follow these steps:  
 1. Clone or download the repository.  
 2. Open the project in Unity.  
@@ -18,5 +18,5 @@ To get started with [Name of the Game], follow these steps:
 
 Alternatively, you ceck out the web game on Nasa's website [here](https://www.example.com) to play without needing Unity.  
 
-# Acknowledgements🔭
+### Acknowledgements🔭
 We would like to acknowledge NASA for their unwavering commitment to space exploration and the groundbreaking Psyche Mission, which served as the wellspring of inspiration for this endeavor. Their dedication to expanding our knowledge of the cosmos has been a guiding light throughout this project.
