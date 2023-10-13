@@ -1,6 +1,10 @@
 # 12GNasaWebBasedGame
 This project aims to develop an educational online game that takes inspiration from NASA's Psyche Mission, a groundbreaking space exploration endeavor. This game has a profound purpose: to immerse players in an interactive and educational journey, thereby enhancing their understanding of space exploration and igniting their enthusiasm.
 
+### Team Members
+|Neha Balamurugan|Pratham Gupta|Garrett Goodwin|Julie Kye|Loe-Paul Morel|
+|----|----|----|----|----|
+
 ## About the Game
 [Name of Game] is a top-down shooter where the player must face endless waves of increasingly lethal enemies. Survive as long as you can and see how high you can climb on the leaderboard.
 
