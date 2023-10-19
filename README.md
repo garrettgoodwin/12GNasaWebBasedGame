@@ -18,7 +18,7 @@ To get started with [Name of the Game], follow these steps:
 
 Alternatively, you check out the web game on Nasa's website [here](https://www.example.com) to play without needing Unity.  
 
-### Documents
+### Documents📁
 
 #### Brainstorming
 - [Story Boarding](https://arizonastateu-my.sharepoint.com/:w:/r/personal/mshefik_sundevils_asu_edu/Documents/Psyche%20Capstone/CSE%20485/Story%20Boarding%20Session.docx?d=wcba8c1f5649a45e788214b9ee5391d1e&csf=1&web=1&e=3UhjXX)
