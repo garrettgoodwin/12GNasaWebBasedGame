@@ -29,5 +29,9 @@ Alternatively, you check out the web game on Nasa's website [here](https://www.e
 - [Sprint 1 Retrospective](https://arizonastateu-my.sharepoint.com/:w:/r/personal/mshefik_sundevils_asu_edu/Documents/Psyche%20Capstone/CSE%20485/Sprint%201%20Retrospective/Sprint%201%20Retrospective.docx?d=wf3257bd0ac8e40aca73301b19b8f5136&csf=1&web=1&e=JwKGAF)
 - [Sprint 2 Retrospective](https://arizonastateu-my.sharepoint.com/:w:/r/personal/mshefik_sundevils_asu_edu/Documents/Psyche%20Capstone/CSE%20485/Sprint%202%20Retrospective/Sprint%202%20Retrospective.docx?d=w92e240bf93ee436b88c9751e1b3a27c7&csf=1&web=1&e=pRqJbS)
 
+#### Tasks And Assignments
+This file includes the delegation of assignments.
+- [Tasks And Assignments](https://arizonastateu-my.sharepoint.com/:w:/r/personal/mshefik_sundevils_asu_edu/Documents/Psyche%20Capstone/CSE%20485/Tasks%20and%20Assignment.docx?d=wa7cd9ef3d41246f39eef9c61f5bf2084&csf=1&web=1&e=anFukx)
+
 ### Acknowledgements🔭
 We would like to acknowledge NASA for their unwavering commitment to space exploration and the groundbreaking Psyche Mission, which served as the wellspring of inspiration for this endeavor. Their dedication to expanding our knowledge of the cosmos has been a guiding light throughout this project.
