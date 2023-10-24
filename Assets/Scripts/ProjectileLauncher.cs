@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class ProjectileLauncher : MonoBehaviour
 {
+    [Header("Statistics")]
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private float launchCooldown;
     [SerializeField] private float lastLaunchedTime;
 
-    //References
+    [Header("References")]
     [SerializeField] private GameObject projectileObj;
-
 
     public void LaunchAt(Transform target)
     {
         Quaternion rotation = Quaternion.AngleAxis(Rotation(target) + 90, Vector3.forward);
-
         transform.rotation = rotation;
 
         if (Time.time >= lastLaunchedTime)
@@ -31,7 +30,6 @@ public class ProjectileLauncher : MonoBehaviour
         Instantiate(projectileObj, spawnPoint.position, transform.rotation);
     }
 
-    //Currently Not Being Used
     public float Rotation(Transform target)
     {
         if (target != null)

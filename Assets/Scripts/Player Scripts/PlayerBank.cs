@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerBank : MonoBehaviour
 {
-
-    public int totalAmount = 0;
+    private int totalAmount = 0;
 
     public void IncreaseBankAmount(int amount)
     {
@@ -22,6 +21,11 @@ public class PlayerBank : MonoBehaviour
             totalAmount = 0;
         }
         PrintOutAmount();
+    }
+
+    public int GetBankAmount()
+    {
+        return totalAmount;
     }
 
     void PrintOutAmount()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    //Projectile statistics
+    [Header("Statistics")]
     [SerializeField] private float speed;
     [SerializeField] private float lifeTime;
     [SerializeField] private int damage;
@@ -28,13 +28,8 @@ public class Projectile : MonoBehaviour
         }
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        Debug.Log("Just Entered Here");
-
-
         if (collision.tag == "Player")
         {
             PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
@@ -50,7 +45,4 @@ public class Projectile : MonoBehaviour
             }
         }
     }
-
-
-
 }

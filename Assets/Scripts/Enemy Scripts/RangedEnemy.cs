@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class RangedEnemy : Enemy
 {
-
     public bool inRange;
-
     [SerializeField] private ProjectileLauncher projectileLauncher;
-
-    //public Transform SkeleytonFeetEmpty;
-    //public GameObject SkeletonRunParticles;
-    //public GameObject WeaponArm;
-    //public GameObject VisableArm;
 
     void Update()
     {

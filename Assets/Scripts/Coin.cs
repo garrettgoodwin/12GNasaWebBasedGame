@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    //Could have various different types of coins, so I made serializable
-    [SerializeField] int valueAmount = 1;
+    [Header("Statistics")]
+    [SerializeField] private int valueAmount = 1;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -4,8 +4,21 @@ using UnityEngine;
 
 public class Hazard : MonoBehaviour
 {
-    //Could have various different types of coins, so I made serializable
-    [SerializeField] int valueAmount = 1;
+    [Header("Statistics")]
+    [SerializeField] private int damageAmount = 1;
+    [SerializeField] private float maxSpeed;
+    [SerializeField] private float minSpeed;
+    private float speed;
+
+    private void Start()
+    {
+        speed = Random.Range(minSpeed, maxSpeed);
+    }
+
+    private void Update()
+    {
+        transform.Translate(Vector2.right * -speed * Time.deltaTime);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,7 +28,7 @@ public class Hazard : MonoBehaviour
 
             if (playerHealth != null)
             {
-                playerHealth.IncreaseHealth(valueAmount);
+                playerHealth.DecreaseHealth(damageAmount);
                 Destroy(gameObject);
             }
             else

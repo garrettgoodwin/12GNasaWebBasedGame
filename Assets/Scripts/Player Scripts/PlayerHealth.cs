@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] int maxHealth;
-    int currentHealth;
+    [Header("Statistics")]
+    [SerializeField] private int maxHealth;
+    private int currentHealth;
 
     private void Start()
     {

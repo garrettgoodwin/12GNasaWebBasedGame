@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    [Header("Statistics")]
     [SerializeField] private float speed;
-    private Rigidbody2D playerRigidBody;
     private Vector2 moveAmount;
 
+    [Header("References")]
+    private Rigidbody2D playerRigidBody;
 
-    // Start is called before the first frame update
     void Start()
     {
         playerRigidBody = GetComponent<Rigidbody2D>();
@@ -21,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));

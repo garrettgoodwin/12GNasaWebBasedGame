@@ -4,15 +4,43 @@ using UnityEngine;
 
 public class HazardSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Statistics")]
+    [SerializeField] private float spawnCooldown;
+    [SerializeField] private float initialSpawnTime;
+    [SerializeField] private float timeDecreaseRate;
+    [SerializeField] private float timeUntilNextSpawn;
 
-    // Update is called once per frame
+    [Header("References")]
+    [SerializeField] private Transform[] spawnpointTransforms;
+    [SerializeField] private GameObject[] hazardPrefabs;
+
     void Update()
     {
-        
+        if (timeUntilNextSpawn <= 0)
+        {
+            SpawnHazardAtRandomSpawnPoint();
+
+            if (initialSpawnTime > spawnCooldown)
+            {
+                initialSpawnTime -= timeDecreaseRate;
+            }
+
+            timeUntilNextSpawn = initialSpawnTime;
+        }
+        else
+        {
+            timeUntilNextSpawn -= Time.deltaTime;
+        }
+    }
+
+    /// <summary>
+    /// This function selects a random spawnpoint from the array of available spawnpoints
+    /// and instantiates a hazards prefab at that spawnpoint.
+    /// </summary>
+    void SpawnHazardAtRandomSpawnPoint()
+    {
+        Transform randomSpawnpoint = spawnpointTransforms[Random.Range(0, spawnpointTransforms.Length)];
+        GameObject randomHazard = hazardPrefabs[Random.Range(0, hazardPrefabs.Length)];
+        Instantiate(randomHazard, randomSpawnpoint.position, Quaternion.identity);
     }
 }

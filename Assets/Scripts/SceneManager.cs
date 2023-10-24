@@ -5,12 +5,5 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
-    //[SerializeField] Scene[] test;
-
-    //public void ToMainMenu()
-    //{
-    //    SceneManager.lo
-    //}
-
 
 }

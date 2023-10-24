@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("References")]
     private PlayerMovement playerMovement;
     private PlayerBank playerBank;
     private PlayerHealth playerHealth;
 
-    // Start is called before the first frame update
     void Start()
     {
         InitializeComponents();
@@ -33,5 +33,4 @@ public class Player : MonoBehaviour
             Debug.LogError("Player Health Component is not assigned in Player script"); ;
         }
     }
-
 }
