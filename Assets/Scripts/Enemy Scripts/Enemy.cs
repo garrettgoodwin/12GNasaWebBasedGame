@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    //Enemy Statistics
+    [Header("General Enemy Statistics")]
     [SerializeField] protected int health;
     [SerializeField] protected float speed;
     [SerializeField] protected int damage;
     [SerializeField] protected float stopDistance;
-    //public float timeBetweenAttacks;
 
-    //References Related to Enemy
-    [SerializeField] GameObject destroyParticles;
-    [SerializeField] Animator anim;
-
-    //References Related to Player
+    [Header("General Enemy References")]
+    [SerializeField] private GameObject destroyParticles;
+    [SerializeField] private Animator anim;
     protected Transform player;
     protected PlayerHealth playerHealthScript;
 
@@ -41,8 +38,6 @@ public class Enemy : MonoBehaviour
         {
             Debug.LogWarning("Player Script is not found in Enemy Script");
         }
-
-        //anim = gameObject.GetComponent<Animator>();
     }
 
     protected void DecreaseHealth(int amount)

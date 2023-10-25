@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1727618145605717350}
-  - component: {fileID: -3700685263292510215}
-  - component: {fileID: 8640472428503848799}
-  m_Layer: 6
-  m_Name: MeleeEnemy
-  m_TagString: Enemy
+  - component: {fileID: 6588876816868468010}
+  - component: {fileID: 2101868457233597522}
+  m_Layer: 0
+  m_Name: Projectile3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,13 +28,13 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.77, y: -2.18, z: -4.0621285}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1762125897639698918}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-3700685263292510215
+--- !u!114 &6588876816868468010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,16 +43,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 27391881241802816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 213202db2fd66424d80c861bc8a35515, type: 3}
+  m_Script: {fileID: 11500000, guid: 68bbc84210ee9c946886baac1d71713c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  speed: 3
+  speed: 8.5
+  lifeTime: 4
   damage: 1
-  stopDistance: 0
-  destroyParticles: {fileID: 0}
-  anim: {fileID: 0}
---- !u!58 &8640472428503848799
+  hitObject: 0
+--- !u!58 &2101868457233597522
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -81,7 +79,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -97,7 +95,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1762125897639698918}
   - component: {fileID: 4429319124120935050}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +159,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.99753475, g: 0, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.6784314, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

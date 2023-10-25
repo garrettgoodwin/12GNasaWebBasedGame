@@ -8,11 +8,13 @@ public class Hazard : MonoBehaviour
     [SerializeField] private int damageAmount = 1;
     [SerializeField] private float maxSpeed;
     [SerializeField] private float minSpeed;
+    [SerializeField] private float lifetime;
     private float speed;
 
     private void Start()
     {
         speed = Random.Range(minSpeed, maxSpeed);
+        Invoke("DestroySelf", lifetime);
     }
 
     private void Update()
@@ -37,4 +39,10 @@ public class Hazard : MonoBehaviour
             }
         }
     }
+
+    private void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
+
 }

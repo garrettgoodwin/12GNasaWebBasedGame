@@ -2,33 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileLauncher : MonoBehaviour
+public abstract class ProjectileLauncher : MonoBehaviour
 {
     [Header("Statistics")]
-    [SerializeField] private Transform spawnPoint;
-    [SerializeField] private float launchCooldown;
-    [SerializeField] private float lastLaunchedTime;
+    [SerializeField] protected Transform spawnPoint;
+    [SerializeField] protected float launchCooldown;
+    protected float lastLaunchedTime;
 
     [Header("References")]
-    [SerializeField] private GameObject projectileObj;
+    [SerializeField] protected GameObject projectileObj;
 
-    public void LaunchAt(Transform target)
-    {
-        Quaternion rotation = Quaternion.AngleAxis(Rotation(target) + 90, Vector3.forward);
-        transform.rotation = rotation;
-
-        if (Time.time >= lastLaunchedTime)
-        {
-            StartCoroutine(LaunchCoroutine());
-            lastLaunchedTime = Time.time + launchCooldown;
-        }
-    }
-
-    IEnumerator LaunchCoroutine()
-    {
-        yield return new WaitForSeconds(1f);
-        Instantiate(projectileObj, spawnPoint.position, transform.rotation);
-    }
+    public abstract void LaunchAt(Transform target);
 
     public float Rotation(Transform target)
     {
