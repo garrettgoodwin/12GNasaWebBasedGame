@@ -74,7 +74,7 @@ public class SingleShotEnemy : Enemy
 
             case EnemyState.Retreat:
                 transform.Translate(Vector2.right * speed * Time.deltaTime);
-                if (enemyStateTransitionATimer >= preparteToShootTime)
+                if (enemyStateTransitionATimer >= retreatTime)
                 {
                     currentEnemyState = EnemyState.Done;
                     enemyStateTransitionATimer = 0;

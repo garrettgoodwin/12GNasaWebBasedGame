@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Statistics")]
     [SerializeField] private float speed;
     private Vector2 moveAmount;
+    [SerializeField] private float sprintSpeedMultiplier;
 
     [Header("References")]
     private Rigidbody2D playerRigidBody;
@@ -25,6 +26,12 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveAmount = moveInput.normalized * speed; //normalized used in order to prevent diagonal movement increasing speed
+    
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            moveAmount *= sprintSpeedMultiplier;
+        }
+    
     }
 
     private void FixedUpdate()

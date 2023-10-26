@@ -215,16 +215,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  speed: 2
+  speed: 9
   damage: 1
   stopDistance: 2
   destroyParticles: {fileID: 0}
   anim: {fileID: 0}
   projectileLauncher: {fileID: 2243620644616609645}
-  moveTime: 3
-  preparteToShootTime: 2
-  prepareToRetreatTime: 2
-  retreatTime: 3
+  moveTime: 1
+  preparteToShootTime: 0.5
+  prepareToRetreatTime: 0.5
+  retreatTime: 5
 --- !u!1 &7333952015380837260
 GameObject:
   m_ObjectHideFlags: 0

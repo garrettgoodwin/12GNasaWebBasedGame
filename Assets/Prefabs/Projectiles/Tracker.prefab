@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -3700685263292510215}
   - component: {fileID: 8640472428503848799}
   m_Layer: 6
-  m_Name: MeleeEnemy
+  m_Name: Tracker
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 27391881241802816}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.77, y: -2.18, z: -4.0621285}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1762125897639698918}
