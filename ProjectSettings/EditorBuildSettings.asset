@@ -8,4 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 20f98d752e5f24cf3baf063c0f689431
+  - enabled: 1
+    path: Assets/Scenes/StoryMode.unity
+    guid: 39f2db187ecf04a8c82c0d969cd53eaf
+  - enabled: 1
+    path: Assets/Scenes/EndlessMode.unity
+    guid: 730057ddc95994f02bfc13218a0d6eb6
+  - enabled: 1
+    path: Assets/Scenes/Options.unity
+    guid: 55bb207908ad34ebba683b73556db7c7
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: a42f83110156b40d39343beacad5d7a2
   m_configObjects: {}
