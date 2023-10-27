@@ -5,16 +5,19 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [Header("General Enemy Statistics")]
+
     [SerializeField] protected int health;
     [SerializeField] protected float speed;
     [SerializeField] protected int damage;
     [SerializeField] protected float stopDistance;
 
     [Header("General Enemy References")]
+
     [SerializeField] private GameObject destroyParticles;
     [SerializeField] private Animator anim;
     protected Transform player;
     protected PlayerHealth playerHealthScript;
+    [SerializeField] protected SelfDestructor selfDestructor;
 
     void Start()
     {
@@ -64,7 +67,7 @@ public class Enemy : MonoBehaviour
 
     protected void Die()
     {
-        Destroy(gameObject);
+        selfDestructor.DestroyOneself();
     }
 
     protected void FollowPlayerWithinRange()

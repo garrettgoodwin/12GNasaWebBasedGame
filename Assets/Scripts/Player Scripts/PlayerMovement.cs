@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Statistics")]
+
     [SerializeField] private float speed;
     private Vector2 moveAmount;
     [SerializeField] private float sprintSpeedMultiplier;

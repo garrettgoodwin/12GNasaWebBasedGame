@@ -5,6 +5,7 @@ using UnityEngine;
 public class SingleShotEnemy : Enemy
 {
     [Header("Single-Shot References")]
+
     [SerializeField] private ProjectileLauncher projectileLauncher;
 
     public enum EnemyState

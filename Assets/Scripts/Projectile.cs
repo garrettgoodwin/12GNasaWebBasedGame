@@ -10,6 +10,9 @@ public class Projectile : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private bool hitObject;
 
+    [Header("References")]
+    [SerializeField] private SelfDestructor selfDestructor;
+
     void Start()
     {
         Invoke(nameof(DestroyProjectile), lifeTime);
@@ -24,6 +27,7 @@ public class Projectile : MonoBehaviour
     {
         if (gameObject != null)
         {
+            selfDestructor.DestroyOneself();
             Destroy(gameObject);
         }
     }

@@ -143,13 +143,14 @@ GameObject:
   - component: {fileID: 7302204361334627579}
   - component: {fileID: 2319057716315561964}
   - component: {fileID: 1349316676834338230}
+  - component: {fileID: 8914411442620349709}
   m_Layer: 6
   m_Name: Path MultiShot Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7302204361334627579
 Transform:
   m_ObjectHideFlags: 0
@@ -158,7 +159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4499830266059660150}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.2485595, y: 1.2053151, z: -4.0621285}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -220,11 +221,26 @@ MonoBehaviour:
   stopDistance: 2
   destroyParticles: {fileID: 0}
   anim: {fileID: 0}
+  selfDestructor: {fileID: 8914411442620349709}
   projectileLauncher: {fileID: 2243620644616609645}
   moveTime: 1
   preparteToShootTime: 0.5
   prepareToRetreatTime: 0.5
   retreatTime: 5
+--- !u!114 &8914411442620349709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4499830266059660150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4551c4c90206f6b4eacc19d2bb2b8dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyParticles: {fileID: 0}
+  destroySound: {fileID: 0}
 --- !u!1 &7333952015380837260
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4984046209052558631}
   - component: {fileID: 8293030561068210451}
   - component: {fileID: 5569254421908524816}
+  - component: {fileID: 3240957012849439347}
   m_Layer: 6
   m_Name: Path MultiShot Enemy -Tracker
   m_TagString: Enemy
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330672668001475449}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.2485595, y: -3.294685, z: -4.0621285}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -88,11 +89,26 @@ MonoBehaviour:
   stopDistance: 2
   destroyParticles: {fileID: 0}
   anim: {fileID: 0}
+  selfDestructor: {fileID: 3240957012849439347}
   projectileLauncher: {fileID: 642364250729780254}
   moveTime: 1
   preparteToShootTime: 0.5
   prepareToRetreatTime: 0.5
   retreatTime: 5
+--- !u!114 &3240957012849439347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330672668001475449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4551c4c90206f6b4eacc19d2bb2b8dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyParticles: {fileID: 0}
+  destroySound: {fileID: 0}
 --- !u!1 &2814477829298225173
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Statistics")]
     [SerializeField] private int maxHealth;
     private int currentHealth;
+    private SelfDestructor selfDestructor;
+
+
+    public UnityEvent OnPlayerDeath;
 
     private void Start()
     {
@@ -37,7 +42,9 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("The player has perished");
+        //Doesnt technically need to happen if the scene is just reset
+        //selfDestructor.DestroyOneself();
+        OnPlayerDeath?.Invoke();
     }
 
     public int GetCurrentHealth()

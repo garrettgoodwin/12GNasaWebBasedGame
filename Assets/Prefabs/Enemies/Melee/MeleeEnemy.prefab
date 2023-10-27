@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 1727618145605717350}
   - component: {fileID: -3700685263292510215}
   - component: {fileID: 8640472428503848799}
+  - component: {fileID: 2325791929109732933}
   m_Layer: 6
   m_Name: MeleeEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1727618145605717350
 Transform:
   m_ObjectHideFlags: 0
@@ -52,6 +53,7 @@ MonoBehaviour:
   stopDistance: 0
   destroyParticles: {fileID: 0}
   anim: {fileID: 0}
+  selfDestructor: {fileID: 2325791929109732933}
 --- !u!58 &8640472428503848799
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -87,6 +89,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &2325791929109732933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27391881241802816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4551c4c90206f6b4eacc19d2bb2b8dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyParticles: {fileID: 0}
+  destroySound: {fileID: 0}
 --- !u!1 &9139535015631660589
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,9 @@ public class Coin : MonoBehaviour
     [Header("Statistics")]
     [SerializeField] private int valueAmount = 1;
 
+    [Header("References")]
+    [SerializeField] private SelfDestructor selfDestructor;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
@@ -16,7 +19,7 @@ public class Coin : MonoBehaviour
             if(playerBank != null)
             {
                 playerBank.IncreaseBankAmount(valueAmount);
-                Destroy(gameObject);
+                selfDestructor.DestroyOneself();
             }
             else
             {

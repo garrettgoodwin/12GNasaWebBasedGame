@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  sprintSpeedMultiplier: 0
 --- !u!114 &2930795253711132391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,7 +77,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b10882cc2835884eaa14892668315d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalAmount: 0
 --- !u!114 &6036796837178972892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +89,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea83d388000e8c44db6257f7d232a0e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 3
+  OnPlayerDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &9192349299021235328
 Rigidbody2D:
   serializedVersion: 4
