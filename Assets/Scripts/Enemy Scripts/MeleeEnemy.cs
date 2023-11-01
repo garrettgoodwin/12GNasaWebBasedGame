@@ -20,5 +20,12 @@ public class MeleeEnemy : Enemy
                 Die();
             }
         }
+
+        if(collision.gameObject.tag == "Enemy")
+        {
+            Die();
+        }
+
+
     }
 }

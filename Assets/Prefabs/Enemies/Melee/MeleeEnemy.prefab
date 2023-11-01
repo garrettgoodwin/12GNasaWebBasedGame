@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  speed: 3
+  speed: 1
   damage: 1
   stopDistance: 0
   destroyParticles: {fileID: 0}

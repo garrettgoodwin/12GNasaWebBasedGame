@@ -10,10 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1192599573453923537}
   - component: {fileID: 2434440691026894542}
+  - component: {fileID: 5349828930000734091}
   - component: {fileID: 7821676807384599599}
-  m_Layer: 0
+  - component: {fileID: 7462212955830827122}
+  m_Layer: 6
   m_Name: Obstacle
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.3687496, y: -2.18, z: -4.0621285}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 0.335108, y: 0.335108, z: 0.335108}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6313832099395759257}
@@ -48,9 +50,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  maxSpeed: 15
-  minSpeed: 7
+  maxSpeed: 3
+  minSpeed: 2
   lifetime: 10
+  selfDestructor: {fileID: 5349828930000734091}
+--- !u!114 &5349828930000734091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4181002049544341688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4551c4c90206f6b4eacc19d2bb2b8dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyParticles: {fileID: 0}
+  destroySound: {fileID: 0}
 --- !u!58 &7821676807384599599
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -86,6 +103,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &7462212955830827122
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4181002049544341688}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6496871616156468517
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6313832099395759257}
   - component: {fileID: 719558003891512326}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6531755074232826412}
   - component: {fileID: 3954247102705250319}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 1_asteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}

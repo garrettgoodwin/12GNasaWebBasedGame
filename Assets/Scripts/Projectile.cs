@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+//Shoudl add this but lazy
 public class Projectile : MonoBehaviour
 {
     [Header("Statistics")]
@@ -28,7 +31,6 @@ public class Projectile : MonoBehaviour
         if (gameObject != null)
         {
             selfDestructor.DestroyOneself();
-            Destroy(gameObject);
         }
     }
 

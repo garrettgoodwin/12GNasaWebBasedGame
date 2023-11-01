@@ -8,7 +8,7 @@ public class HazardSpawner : MonoBehaviour
     [SerializeField] private float spawnCooldown;
     [SerializeField] private float initialSpawnTime;
     [SerializeField] private float timeDecreaseRate;
-    [SerializeField] private float timeUntilNextSpawn;
+    private float timeUntilNextSpawn;
 
     [Header("References")]
     [SerializeField] private Transform[] spawnpointTransforms;

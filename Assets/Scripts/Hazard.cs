@@ -11,6 +11,11 @@ public class Hazard : MonoBehaviour
     [SerializeField] private float lifetime;
     private float speed;
 
+    [Header("References")]
+    [SerializeField] private SelfDestructor selfDestructor;
+
+
+
     private void Start()
     {
         speed = Random.Range(minSpeed, maxSpeed);
@@ -31,7 +36,7 @@ public class Hazard : MonoBehaviour
             if (playerHealth != null)
             {
                 playerHealth.DecreaseHealth(damageAmount);
-                Destroy(gameObject);
+                selfDestructor.DestroyOneself();
             }
             else
             {
@@ -44,5 +49,4 @@ public class Hazard : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
 }
