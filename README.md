@@ -2,7 +2,7 @@
 This project seeks to create an engaging online educational game inspired by NASA's groundbreaking Psyche Mission, a remarkable space exploration endeavor. The game's primary objective is to immerse players in an interactive and educational experience, fostering a deeper understanding of space exploration and sparking their enthusiasm for the subject🚀
 
 ### Team Members🫱🏻‍🫲🏾
-|Neha Balamurugan|Pratham Gupta|Garrett Goodwin|Julie Kye|Leo-Paul Morel|
+|Neha Balamurugan|Pratham Gupta|Garrett Goodwin|Julie Kye|Loe-Paul Morel|
 |----|----|----|----|----|
 
 ### About the Game🎮
