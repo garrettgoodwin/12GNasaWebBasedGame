@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2434440691026894542}
   - component: {fileID: 5349828930000734091}
   - component: {fileID: 7821676807384599599}
-  - component: {fileID: 7462212955830827122}
+  - component: {fileID: 345694392661588033}
   m_Layer: 6
   m_Name: Obstacle
   m_TagString: Enemy
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyParticles: {fileID: 0}
-  destroySound: {fileID: 0}
+  destroySound: []
 --- !u!58 &7821676807384599599
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -103,7 +103,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!50 &7462212955830827122
+--- !u!50 &345694392661588033
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

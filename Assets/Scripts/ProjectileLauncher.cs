@@ -11,6 +11,8 @@ public abstract class ProjectileLauncher : MonoBehaviour
 
     [Header("References")]
     [SerializeField] protected GameObject projectileObj;
+    [SerializeField] protected AudioSource[] launchSounds;
+
 
     public abstract void LaunchAt(Transform target);
 

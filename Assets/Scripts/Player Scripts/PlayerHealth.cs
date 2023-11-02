@@ -9,6 +9,11 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private int maxHealth;
     private int currentHealth;
     private SelfDestructor selfDestructor;
+    [SerializeField] protected AudioSource[] playerHurtSounds;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private float inVulnerabilityDuration;
+
+    private bool inVulnerable;
 
 
     public UnityEvent OnPlayerDeath;
@@ -21,10 +26,21 @@ public class PlayerHealth : MonoBehaviour
 
     public void DecreaseHealth(int amount)
     {
-        currentHealth -= amount;
-        if (currentHealth <= 0)
+
+        if(!inVulnerable)
         {
-            Die();
+            currentHealth -= amount;
+
+            int randNumb = Random.Range(0, playerHurtSounds.Length);
+            Instantiate(playerHurtSounds[randNumb]);
+
+            StartCoroutine(InvulnerabilityEffect(inVulnerabilityDuration));
+
+
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
         }
     }
 
@@ -39,6 +55,30 @@ public class PlayerHealth : MonoBehaviour
             }
         }
     }
+
+    IEnumerator InvulnerabilityEffect(float invulnerabilityTime)
+    {
+        inVulnerable = true;
+
+        float timer = 0;
+        float colorFlickerTime = .1f;
+
+        while(timer < inVulnerabilityDuration)
+        {
+            spriteRenderer.enabled = !spriteRenderer.enabled;
+            yield return new WaitForSeconds(colorFlickerTime);
+
+            //spriteRenderer.color = Color.red;
+            //yield return new WaitForSeconds(colorFlickerTime);
+            //spriteRenderer.color = Color.white;
+            //yield return new WaitForSeconds(colorFlickerTime);
+            timer += (colorFlickerTime);
+        }
+
+        spriteRenderer.enabled = true;
+        inVulnerable = false;
+    }
+
 
     public void Die()
     {

@@ -43,7 +43,7 @@ public class Projectile : MonoBehaviour
             if (playerHealth != null)
             {
                 playerHealth.DecreaseHealth(damage);
-                Destroy(gameObject);
+                selfDestructor.DestroyOneself();
             }
             else
             {

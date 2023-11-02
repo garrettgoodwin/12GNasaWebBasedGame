@@ -6,7 +6,7 @@ public class SelfDestructor : MonoBehaviour
 {
     //Have the gameobject contian the particels
     [SerializeField] private GameObject destroyParticles;
-    [SerializeField] private AudioSource destroySound;
+    [SerializeField] private AudioSource[] destroySound;
 
     public void DestroyOneself()
     {
@@ -17,27 +17,19 @@ public class SelfDestructor : MonoBehaviour
             //Problem here with timing -Destroy Object whcih contains particle system
             //destroyParticles.Play();
 
-            Debug.Log("FUCKING SPAWN IN");
             Instantiate(destroyParticles, gameObject.transform);
 
         }
 
-        if (destroySound != null)
+        if (destroySound.Length > 0)
         {
             //Play sound
             //destroySound.Play();
+
+            int randomNumb = Random.Range(0, destroySound.Length);
+            Instantiate(destroySound[randomNumb]);
         }
 
         Destroy(gameObject);
     }
-
-
-    //Destroy this
-    //IEnumerator TEMPFIX()
-    //{
-    //    yield return new WaitForSeconds(3f);
-    //    Destroy(gameObject);
-    //}
-
-
 }

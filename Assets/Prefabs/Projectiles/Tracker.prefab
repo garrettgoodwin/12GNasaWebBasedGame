@@ -67,7 +67,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyParticles: {fileID: 1951732912323905033, guid: e4ecb297cad2c3b498a7c32fde217217, type: 3}
-  destroySound: {fileID: 0}
+  destroySound:
+  - {fileID: 260334639833619758, guid: e1a8a4811606ef04e8074d67d3ab948a, type: 3}
+  - {fileID: 3052162705247981393, guid: 8a9a3984dc1c903478ac0487b1a62069, type: 3}
+  - {fileID: 8055572622000113256, guid: 83e2555f9e40c6f4f8fc52e531fd5be8, type: 3}
+  - {fileID: 4463695526288503843, guid: 000fb455c8f918147b99bba325a9076c, type: 3}
 --- !u!58 &8640472428503848799
 CircleCollider2D:
   m_ObjectHideFlags: 0

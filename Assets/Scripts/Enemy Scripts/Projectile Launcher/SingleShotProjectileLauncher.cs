@@ -11,6 +11,8 @@ public class SingleShotProjectileLauncher : ProjectileLauncher
 
         if (Time.time >= lastLaunchedTime)
         {
+            int randNumb = Random.Range(0, launchSounds.Length);
+            Instantiate(launchSounds[randNumb]);
             Instantiate(projectileObj, spawnPoint.position, transform.rotation);
             lastLaunchedTime = Time.time + launchCooldown;
         }

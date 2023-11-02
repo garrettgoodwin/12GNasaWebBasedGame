@@ -92,6 +92,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  playerHurtSounds:
+  - {fileID: 8520265725804761830, guid: 5659c7ae8a2fc7545a1e8f21e17f44f4, type: 3}
+  - {fileID: 2888589584604813283, guid: d72c49347e7f0db4689ad03a27061dc7, type: 3}
   OnPlayerDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -162,7 +165,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -1645930878, guid: afe2c2274d9840b4c80619ad793d47d0, type: 3}
   m_Color: {r: 0.9568628, g: 0.9725491, b: 0.9490197, a: 1}
   m_FlipX: 0

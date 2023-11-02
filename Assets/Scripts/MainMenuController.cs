@@ -3,6 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+
+
+
+
     public void StartStoryMode()
     {
         SceneManager.LoadScene("StoryMode");  
@@ -21,5 +25,15 @@ public class MainMenuController : MonoBehaviour
     public void OpenOptions()
     {
         SceneManager.LoadScene("Options");  
+    }
+
+    public void ToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ToGameScene()
+    {
+        SceneManager.LoadScene("Main");
     }
 }

@@ -126,6 +126,7 @@ MonoBehaviour:
   preparteToShootTime: 0.5
   prepareToRetreatTime: 0.5
   retreatTime: 5
+  fireSoundEffects: []
 --- !u!114 &8664160634906813726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyParticles: {fileID: 0}
-  destroySound: {fileID: 0}
+  destroySound: []
 --- !u!1 &4711425495971677700
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,6 +189,10 @@ MonoBehaviour:
   spawnPoint: {fileID: 6657718097334896383}
   launchCooldown: 1
   projectileObj: {fileID: 27391881241802816, guid: dfce633ec09e6af49bdcc50ff32d57f2, type: 3}
+  launchSounds:
+  - {fileID: 6727580846857437296, guid: 47e575c9d3b0d454984a15524c8ed524, type: 3}
+  - {fileID: 9020366902985245652, guid: b8cd3078980251f4fb772f5707a816a0, type: 3}
+  - {fileID: 6392937202929331496, guid: ccfb03a0c0aaf394fafb1a8b975422fa, type: 3}
 --- !u!1 &8585109950705413773
 GameObject:
   m_ObjectHideFlags: 0
