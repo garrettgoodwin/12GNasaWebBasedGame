@@ -23,7 +23,7 @@ public class HighscoreManager : MonoBehaviour
             PlayerPrefs.SetInt("HighScore", 0);
         highscoreValue = PlayerPrefs.GetInt("HighScore");
 
-        highscoreText.text = "" + highscoreValue;
+        highscoreText.text = highscoreValue.ToString("D5");
     }
 
     public void SetNewHighscore()

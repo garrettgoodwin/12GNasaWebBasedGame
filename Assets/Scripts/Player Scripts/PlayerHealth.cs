@@ -18,6 +18,10 @@ public class PlayerHealth : MonoBehaviour
 
     public UnityEvent OnPlayerDeath;
 
+
+
+    [SerializeField] private ScoreManager scoreRef;
+
     private void Start()
     {
         //Initialize Health
@@ -85,6 +89,16 @@ public class PlayerHealth : MonoBehaviour
         //Doesnt technically need to happen if the scene is just reset
         //selfDestructor.DestroyOneself();
         OnPlayerDeath?.Invoke();
+
+        int highscore = PlayerPrefs.GetInt("HighScore", 0);
+
+        if(scoreRef.score > highscore)
+        {
+            PlayerPrefs.SetInt("HighScore", scoreRef.score);
+            PlayerPrefs.Save();
+        }
+
+
     }
 
     public int GetCurrentHealth()

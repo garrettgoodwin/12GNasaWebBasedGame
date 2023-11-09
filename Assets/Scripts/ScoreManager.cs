@@ -7,7 +7,7 @@ public class ScoreManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text scoreText;
     private float scoreRate = 100f;
-    private int score;
+    public int score;
 
     private bool running = true;
 
