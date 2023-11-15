@@ -79,6 +79,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b10882cc2835884eaa14892668315d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnCoinCountChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6036796837178972892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,9 +98,12 @@ MonoBehaviour:
   playerHurtSounds:
   - {fileID: 8520265725804761830, guid: 5659c7ae8a2fc7545a1e8f21e17f44f4, type: 3}
   - {fileID: 2888589584604813283, guid: d72c49347e7f0db4689ad03a27061dc7, type: 3}
+  spriteRenderer: {fileID: 0}
+  inVulnerabilityDuration: 0
   OnPlayerDeath:
     m_PersistentCalls:
       m_Calls: []
+  scoreRef: {fileID: 0}
 --- !u!50 &9192349299021235328
 Rigidbody2D:
   serializedVersion: 4
@@ -233,8 +239,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.25, y: 0.375}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.25, y: 0.40625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -242,15 +248,18 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.013901167, y: 0.37500003}
-      - {x: -0.01174628, y: 0.37523055}
-      - {x: -0.10645802, y: 0.25527462}
-      - {x: -0.10896409, y: 0.17816916}
-      - {x: -0.08372755, y: 0.090202086}
-      - {x: 0.08614294, y: 0.09320882}
-      - {x: 0.10395282, y: 0.17598425}
-      - {x: 0.10495509, y: 0.26780987}
-      - {x: 0.036030702, y: 0.32388547}
+    - - {x: -0.026651084, y: 0.13945167}
+      - {x: -0.10147894, y: 0.06893143}
+      - {x: -0.10214392, y: -0.005295366}
+      - {x: -0.055469576, y: -0.05651638}
+      - {x: -0.084590346, y: -0.09012612}
+      - {x: 0.084417336, y: -0.09229629}
+      - {x: 0.055635244, y: -0.05438721}
+      - {x: 0.09201828, y: 0.002709086}
+      - {x: 0.094759, y: 0.06705732}
+      - {x: 0.028310083, y: 0.13711742}
+      - {x: 0.0091827065, y: 0.1798028}
+      - {x: -0.009698447, y: 0.1832467}
   m_UseDelaunayMesh: 0
 --- !u!1 &3538825698864926883
 GameObject:

@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 public class PlayerBank : MonoBehaviour
 {
     private int totalAmount = 0;
 
+    public UnityEvent OnCoinCountChanged;
+
     public void IncreaseBankAmount(int amount)
     {
         totalAmount += amount;
+        OnCoinCountChanged?.Invoke();
+
         PrintOutAmount();
     }
 
@@ -20,6 +26,7 @@ public class PlayerBank : MonoBehaviour
         {
             totalAmount = 0;
         }
+        OnCoinCountChanged?.Invoke();
         PrintOutAmount();
     }
 
