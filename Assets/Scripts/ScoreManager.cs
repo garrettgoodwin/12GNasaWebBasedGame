@@ -12,6 +12,8 @@ public class ScoreManager : MonoBehaviour
     private bool running = true;
 
 
+    bool hasStarted = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,16 @@ public class ScoreManager : MonoBehaviour
         //{
         //    playerHealth.OnPlayerDeath.AddListener(StopTimer);
         //}
+    }
+
+
+    private void Update()
+    {
+        if(!hasStarted && Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            StartCoroutine(UpdateScore());
+            hasStarted = true;
+        }
     }
 
     IEnumerator UpdateScore()

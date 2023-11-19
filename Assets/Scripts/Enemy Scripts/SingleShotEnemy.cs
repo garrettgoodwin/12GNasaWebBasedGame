@@ -59,6 +59,8 @@ public class SingleShotEnemy : Enemy
                 break;
 
             case EnemyState.Shoot:
+                anim.SetBool("shoot", true);
+                //anim.SetBool("shoot", false);
                 projectileLauncher.LaunchAt(player);
                 currentEnemyState = EnemyState.PrepareToRetreat;
                 enemyStateTransitionATimer = 0;
@@ -74,6 +76,8 @@ public class SingleShotEnemy : Enemy
 
 
             case EnemyState.Retreat:
+
+                transform.localScale = new Vector3(-1f, 1f, 1f);
                 transform.Translate(Vector2.right * speed * Time.deltaTime);
                 if (enemyStateTransitionATimer >= retreatTime)
                 {

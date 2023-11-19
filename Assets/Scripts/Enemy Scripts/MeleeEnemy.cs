@@ -7,6 +7,9 @@ public class MeleeEnemy : Enemy
 {
 
     bool isFacingRight = false;
+
+    [SerializeField] private GameObject visualIndicator;
+
     protected void FollowPlayerWithinRanges()
     {
         if (player != null)
@@ -67,6 +70,13 @@ public class MeleeEnemy : Enemy
         FollowPlayerWithinRanges();
     }
 
+    void Blinking()
+    {
+        //visualIndicator
+    }
+
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (player != null)
@@ -74,14 +84,14 @@ public class MeleeEnemy : Enemy
             if (collision.gameObject == player.gameObject)
             {
                 playerHealthScript.DecreaseHealth(damage);
-                CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, .1f);
+                CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
                 Die();
             }
         }
 
         if(collision.gameObject.tag == "Enemy")
         {
-            CameraShaker.Instance.ShakeOnce(4f, 4f, .2f, .2f);
+            CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
             Die();
         }
     }

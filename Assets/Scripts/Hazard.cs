@@ -1,3 +1,4 @@
+using EZCameraShake;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,9 +16,24 @@ public class Hazard : MonoBehaviour
     [SerializeField] private SelfDestructor selfDestructor;
 
 
+    [SerializeField] private GameObject brokenObjectPrefab;
+    [SerializeField] private GameObject parentToBrokenObjects;
+    [SerializeField] private GameObject whiteAsteroid;
+
+    [SerializeField] private Animator anim;
 
     private void Start()
     {
+        int  randNimb = Random.Range(0, 2);
+        if(randNimb == 0)
+        {
+            anim.SetBool("CCW", true);
+
+        }
+        else
+        {
+            anim.SetBool("CCW", false);
+        }
         speed = Random.Range(minSpeed, maxSpeed);
         Invoke("DestroySelf", lifetime);
     }
@@ -25,6 +41,19 @@ public class Hazard : MonoBehaviour
     private void Update()
     {
         transform.Translate(Vector2.right * -speed * Time.deltaTime);
+    }
+
+
+    IEnumerator testthingy()
+    {
+        whiteAsteroid.SetActive(true);
+        CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
+        //parentToBrokenObjects.GetComponent<SpriteRenderer>().color = Color.white;
+        yield return new WaitForSeconds(.025f);
+        whiteAsteroid.SetActive(false);
+        Instantiate(brokenObjectPrefab, transform.position, parentToBrokenObjects.transform.rotation);
+        selfDestructor.DestroyOneself();
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -35,13 +64,28 @@ public class Hazard : MonoBehaviour
 
             if (playerHealth != null)
             {
+
+                StartCoroutine(testthingy());
+               // Instantiate(brokenObjectPrefab, transform.position, parentToBrokenObjects.transform.rotation);
+
                 playerHealth.DecreaseHealth(damageAmount);
-                selfDestructor.DestroyOneself();
+                // selfDestructor.DestroyOneself();
+
             }
             else
             {
+
                 Debug.LogWarning("Unable to increase player's health as player health is null");
             }
+        }
+        else if(collision.tag == "Missile")
+        {
+            StartCoroutine(testthingy());
+
+            //Instantiate(brokenObjectPrefab, transform.position, parentToBrokenObjects.transform.rotation);
+            //selfDestructor.DestroyOneself();
+
+
         }
     }
 

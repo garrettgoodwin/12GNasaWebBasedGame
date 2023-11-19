@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     [Header("General Enemy References")]
 
     [SerializeField] private GameObject destroyParticles;
-    [SerializeField] private Animator anim;
+    [SerializeField] protected Animator anim;
     protected Transform player;
     protected PlayerHealth playerHealthScript;
     [SerializeField] protected SelfDestructor selfDestructor;

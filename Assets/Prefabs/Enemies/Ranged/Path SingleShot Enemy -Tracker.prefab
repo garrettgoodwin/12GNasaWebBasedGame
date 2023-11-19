@@ -75,7 +75,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3443998544039903061}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -120,7 +120,7 @@ MonoBehaviour:
   damage: 1
   stopDistance: 2
   destroyParticles: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 1052364903473637520}
   selfDestructor: {fileID: 8664160634906813726}
   projectileLauncher: {fileID: 4101784286731119212}
   moveTime: 1

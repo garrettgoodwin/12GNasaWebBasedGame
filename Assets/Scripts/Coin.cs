@@ -14,17 +14,29 @@ public class Coin : MonoBehaviour
     [Header("References")]
     [SerializeField] private SelfDestructor selfDestructor;
 
-
+    private float amplitude = .05f; // Amplitude of the sine wave
+    private float frequency = 7f; // Frequency of the sine wave
+    private float yOffset; // Offset to store the initial y position
 
     private void Start()
     {
         speed = Random.Range(minSpeed, maxSpeed);
         Invoke("DestroySelf", lifetime);
+        yOffset = transform.position.y;
+
     }
+
 
     private void Update()
     {
+        // Move left
         transform.Translate(Vector2.right * -speed * Time.deltaTime);
+
+        // Calculate the new y position using a sine wave
+        float y = yOffset + amplitude * Mathf.Sin(Time.time * frequency);
+
+        // Update the position of the coin
+        transform.position = new Vector3(transform.position.x, y, transform.position.z);
     }
 
 

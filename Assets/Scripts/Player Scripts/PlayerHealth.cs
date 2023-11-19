@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -15,12 +17,15 @@ public class PlayerHealth : MonoBehaviour
 
     private bool inVulnerable;
 
+    [SerializeField] private TMP_Text healthText;
+
 
     public UnityEvent OnPlayerDeath;
 
 
 
     [SerializeField] private ScoreManager scoreRef;
+    [SerializeField] private Image damageEffect;
 
     private void Start()
     {
@@ -37,15 +42,29 @@ public class PlayerHealth : MonoBehaviour
 
             int randNumb = Random.Range(0, playerHurtSounds.Length);
             Instantiate(playerHurtSounds[randNumb]);
+            healthText.text = currentHealth.ToString();
 
             StartCoroutine(InvulnerabilityEffect(inVulnerabilityDuration));
 
-
+            StartCoroutine(DamageEffectCoroutine());
             if (currentHealth <= 0)
             {
+                if(damageEffect.gameObject.activeInHierarchy)
+                {
+                    damageEffect.gameObject.SetActive(false);
+                }
+
                 Die();
             }
         }
+    }
+
+    private IEnumerator DamageEffectCoroutine()
+    {
+        damageEffect.gameObject.SetActive(true);
+        yield return new WaitForSeconds(.15f);
+        damageEffect.gameObject.SetActive(false);
+
     }
 
     public void IncreaseHealth(int amount)
@@ -97,8 +116,6 @@ public class PlayerHealth : MonoBehaviour
             PlayerPrefs.SetInt("HighScore", scoreRef.score);
             PlayerPrefs.Save();
         }
-
-
     }
 
     public int GetCurrentHealth()

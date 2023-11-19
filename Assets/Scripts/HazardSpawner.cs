@@ -14,9 +14,26 @@ public class HazardSpawner : MonoBehaviour
     [SerializeField] private Transform[] spawnpointTransforms;
     [SerializeField] private GameObject[] hazardPrefabs;
 
+
+    private bool hasStartedGame = false;
+
+    public bool isStarSpawner = false;
+
+    private void Start()
+    {
+        
+    }
+
+
     void Update()
     {
-        if (timeUntilNextSpawn <= 0)
+
+        if(Input.GetKeyDown(KeyCode.Mouse0) | isStarSpawner)
+        {
+            hasStartedGame = true;
+        }
+
+        if (hasStartedGame && timeUntilNextSpawn <= 0)
         {
             SpawnHazardAtRandomSpawnPoint();
 
