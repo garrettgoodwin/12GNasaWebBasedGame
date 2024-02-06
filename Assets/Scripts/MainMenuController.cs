@@ -9,7 +9,7 @@ public class MainMenuController : MonoBehaviour
 
     public void StartStoryMode()
     {
-        SceneManager.LoadScene("StoryMode");  
+        SceneManager.LoadScene("Main");  
     }
 
     public void StartTutorial()
@@ -19,7 +19,7 @@ public class MainMenuController : MonoBehaviour
 
     public void StartEndlessMode()
     {
-        SceneManager.LoadScene("EndlessMode");  
+        SceneManager.LoadScene("Main");  
     }
 
     public void OpenOptions()
